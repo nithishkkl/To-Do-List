@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TO-DO List</h1>
+
+    <input id="input" type="text">
+    <button onclick="add()">Add</button>
+
+    <ul id="list-container">
+        <li> 
+
+        </li>
+    </ul>
+
+
+    
+    <script>
+
+        const listContainer=document.getElementById('list-container')
+        const input=document.getElementById('input')
+
+
+
+        function add(){
+
+            const li=document.createElement('li')
+            li.innerHTML=input.value +'<button onclick="deletelist(event)">Delete</button>'
+            listContainer.append(li)
+
+        }
+
+
+        function deletelist(event){
+
+            event.target.parentElement.remove()
+
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
